@@ -45,3 +45,48 @@ dir .\Microsoft -Recurse
 
 #Find all file extensions .lnk inside the directory "Microsoft"
 dir .\Microsoft\*.lnk -Recurse
+
+#Get list of verbs
+Get-Verb
+
+#Get the list of commands
+Get-Commmand
+
+#Get all commands with file in its name
+Get-Command *file*
+
+#Calling also with the 2 parameters below
+Get-Command -commandType function, cmdlet
+
+#Get the commands with the ACL in the name as a noun
+Get-Command -Noun ACL
+
+#Get the commands with the Get in the name as a Verb
+Get-Command -Verb Get
+
+#Get the commands with the service in the name as a noun
+Get-Command *service*
+
+<#We can combine even#>
+#Get the commands that has in a name 'share'(as noun) and 'Re<something>'(as verb)
+Get-Command -noun *share* -verb Re*
+
+Get-Command -commandType cmdlet
+
+Get-Command -commandType function
+
+Get-Command -commandType alias
+
+
+#------
+gcm -noun computer
+
+#Show all services (running - stopped) on the pc
+Get-Service
+
+#To see help 
+help Get-Service
+
+## ---- Fin Commands previously used
+Ctr + R 
+
