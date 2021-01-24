@@ -37,4 +37,11 @@ Clear-Host
 #Info about PS
 pwsh
 
+#Navigate to appdata from env variable
+cd $env:appdata
 
+#Find recursive inside Microsoft folder.
+dir .\Microsoft -Recurse
+
+#Find all file extensions .lnk inside the directory "Microsoft"
+dir .\Microsoft\*.lnk -Recurse
